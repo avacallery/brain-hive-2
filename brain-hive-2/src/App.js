@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Post from './components/Post'
 import './App.css';
 
 //turn functional component into class-based component 
@@ -32,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to BrainHive!</h1>
+        <h1>Welcome to BrainHive-2!</h1>
         <Post post={this.post}/>
       </div>
     );
