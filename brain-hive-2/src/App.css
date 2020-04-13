@@ -40,7 +40,7 @@
 .box {
   border: 1px solid blueviolet;
   border-width: 2px;
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   background-color: lightseagreen;
 
