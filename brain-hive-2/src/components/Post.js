@@ -5,12 +5,15 @@ import React from 'react';
 const Post = ({post}) => {
     return (
         <div className={'box'}>
+            <div className={'postTitle'}>
             <h2>{post.title}</h2>
-            <p>{post.resourceAuthor}</p>
+            </div>
+            <b>{post.resourceAuthor}</b>
+            <p>Poster: {post.posterName}</p>
             {   post.videoLength ? (<p>Length: {post.videolength}</p>) 
                 : null
             }
-            <p>Rating: {post.rating}</p>
+            <i>"{post.summary}"</i>
             <p>Comments: {post.comments.length}</p>
         </div>
     )
