@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Browser, Route, Switch } from 'react-router-dom'; 
 import Post from './components/Post'
 import './App.css';
 import posts from './mock/posts';
