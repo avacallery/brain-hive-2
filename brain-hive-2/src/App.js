@@ -6,14 +6,16 @@ import './App.css';
 import posts from './mock/posts';
 
 class App extends Component {
+  state = { 
+    posts: [...posts], 
+  };
 
-  renderPosts = () => {
-    const display = posts.map(post => {
-      //importing prop from Post component and reassigning
-      return <Post post={post} />
-    })
-    return display;
-  }
+  addPost = (postData) => {
+    this.setState({
+      posts: [...this.state.posts,
+      postData]
+    });
+  };
 
   render() {
     return (
