@@ -17,4 +17,10 @@ class PostForm extends Component {
         raiting: "",
         comments: []
     };
+    handleChange = (e) => {
+        this.setState({
+            ...this.state, 
+            [e.target.id]: e.target.value
+        });
+    };
 };
