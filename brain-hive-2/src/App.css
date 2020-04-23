@@ -46,6 +46,18 @@
   max-width: 450px; 
 }
 
+.box:hover {
+  border: 1px solid #171717; 
+  border-radius: 8px; 
+  border-bottom-width: 0px;
+  margin-bottom: 25px;
+  padding-bottom: 8px; 
+  width: 80%;
+  max-width: 450px;
+  box-shadow: 5px 3px 5px black;
+  background-color: #F7F7F7; 
+}
+
 .postList {
   display: flex; 
   flex-direction: row;
@@ -57,4 +69,24 @@
   font-family: "papyImpact, Charcoal, sans-serif"; 
   text-align: center;
   font-size: large;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 0 3vw;
+  margin-bottom: 16px;
+}
+
+#brand {
+  flex: 1;
+  display: flex;
+}
+
+#navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
 }
