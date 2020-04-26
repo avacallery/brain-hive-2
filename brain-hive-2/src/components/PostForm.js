@@ -4,6 +4,7 @@ import React, { Component } from "react";
 //this is the initial BLANK state
 //this is a static variable - a constant static value
 const INITIAL_STATE = {
+      id: 0,
       posterName: "",
       resourceAuthor: "",
       jobSkillLevel: "",
