@@ -1,22 +1,31 @@
 import React, { Component } from "react"; 
 
+//object we create externally 
+const INITIAL_STATE = {
+      posterName: "",
+      resourceAuthor: "",
+      jobSkillLevel: "",
+      cohort: "",
+      title: "",
+      categories: "",
+      summary: "",
+      link: "",
+      resourceType: "",
+      datePublished: "",
+      videoLength: "",
+      timeToComplete: "",
+      raiting: "",
+      comments: []
+}
+
 class PostForm extends Component {
-    state = {
-        posterName: "",
-        resourceAuthor: "",
-        jobSkillLevel: "",
-        cohort: "",
-        title: "",
-        categories: "",
-        summary: "",
-        link: "",
-        resourceType: "",
-        datePublished: null,
-        videoLength: "",
-        timeToComplete: "",
-        raiting: "",
-        comments: []
-    };
+    state = {};
+
+    componentDidMount = () => {
+      console.log('Mounting Form.'); 
+      this.setState({ ...INITIAL_STATE });
+    }
+
     handleChange = (e) => {
         this.setState({
             ...this.state, 
@@ -28,22 +37,7 @@ class PostForm extends Component {
         const postData = {...this.state}; 
         postData.categories = postData.categories.split(',');
         this.props.addPost(postData); 
-        this.setState({
-            posterName: "",
-            resourceAuthor: "",
-            jobSkillLevel: "",
-            cohort: "",
-            title: "",
-            categories: "",
-            summary: "",
-            link: "",
-            resourceType: "",
-            datePublished: null,
-            videoLength: "",
-            timeToComplete: "",
-            raiting: "",
-            comments: [],
-        });
+        this.setState({ ...INITIAL_STATE });
     };
     render() {
         return (
