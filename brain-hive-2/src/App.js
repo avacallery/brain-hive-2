@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Browser, Route, Switch } from 'react-router-dom'; 
+import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
 import Post from './components/Post'
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
@@ -21,12 +21,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <h1>Welcome to BrainHive!</h1>
-        <PostList posts={this.state.posts} />
-        <PostForm addPost={this.addPost} /> 
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+          <Route path="/" exact>
+            <PostList posts={this.state.posts} 
+              onSelect={this.onSelect} />
+          </Route>
+          <Route path="/add" exact>
+            <PostForm addPost={this.addPost} />
+          </Route>
+          </Switch>
         </div>
+      </BrowserRouter>
     );
   }
 }
