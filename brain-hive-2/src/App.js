@@ -49,7 +49,7 @@ class App extends Component {
           <Route path="/post/:postId">
             {/* send post with the id that is selected in ViewPost route */}
             <ViewPost 
-            post={this.state.posts[this.state.selected]}/>
+            post={this.state.posts[this.state.selected - 1]}/>
           </Route>
           </Switch>
         </div>

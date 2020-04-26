@@ -5,18 +5,25 @@ import { Redirect } from 'react-router-dom'; //if the item is clicked, user will
 //in order to access the state for Redirect, we make Post.js into a stateful component
 
 class Post extends Component {
-    render() {
-        const { post, handleSelect } = this.props;
+    state = {
+        clicked: false
+    };
 
-        const handleClick = () => {
-            //we want to send back the id of the post we are on
-            handleSelect(post.id);
-        }
+    handleClick = () => {
+        //we want to send back the id of the post we are on
+        this.props.handleSelect(this.props.post.id);
+        //after we click the item, we set state to true
+        this.setState({clicked: true})
+    };
+
+    render() {
+        const { post } = this.props;
 
         return (
             <div
                 className={'box'}
-                onClick={() => handleClick()}>
+                onClick={() => this.handleClick()}>
+                {this.state.clicked ? <Redirect to="/post/id"/> : null}
                 <div className={'postTitle'}>
                     <h2>{post.title}</h2>
                 </div>
