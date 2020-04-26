@@ -3,6 +3,7 @@ import { Browser, Route, Switch } from 'react-router-dom';
 import Post from './components/Post'
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
+import Navbar from './components/Navbar';
 import './App.css';
 import posts from './mock/posts';
 
