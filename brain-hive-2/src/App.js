@@ -4,11 +4,11 @@ import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import Navbar from './components/Navbar';
 import './App.css';
-import posts from './mock/posts';
+import INITIAL_POSTS from './mock/posts';
 
 class App extends Component {
   state = { 
-    posts: [...posts], 
+    posts: [...INITIAL_POSTS], 
   };
 
   addPost = (postData) => {

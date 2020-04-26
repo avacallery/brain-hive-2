@@ -1,6 +1,8 @@
 import React, { Component } from "react"; 
 
-//object we create externally 
+//object we create externally
+//this is the initial BLANK state
+//this is a static variable - a constant static value
 const INITIAL_STATE = {
       posterName: "",
       resourceAuthor: "",
@@ -19,12 +21,7 @@ const INITIAL_STATE = {
 }
 
 class PostForm extends Component {
-    state = {};
-
-    componentDidMount = () => {
-      console.log('Mounting Form.'); 
-      this.setState({ ...INITIAL_STATE });
-    }
+    state = { ...INITIAL_STATE}; 
 
     handleChange = (e) => {
         this.setState({
