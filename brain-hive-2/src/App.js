@@ -32,6 +32,7 @@ class App extends Component {
           <Route path="/add" exact>
             <PostForm addPost={this.addPost} />
           </Route>
+          <Route path="/post/:postid" />
           </Switch>
         </div>
       </BrowserRouter>

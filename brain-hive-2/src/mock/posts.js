@@ -1,5 +1,6 @@
 const posts = [
-    {
+  {
+    id: 1,
     posterName: 'Ava Callery',
     resourceAuthor: 'Paul McCartney',
     jobSkillLevel: 'Junior Developer',
@@ -14,13 +15,14 @@ const posts = [
     timeToComplete: 10,
     rating: 3,
     comments: [
-        {
-      commenter: 'Ava', text: 'Love the Beatles.'
-        },
-        { commenter: 'Ringo', text: 'This is not the real Paul.' }
+      {
+        commenter: 'Ava', text: 'Love the Beatles.'
+      },
+      { commenter: 'Ringo', text: 'This is not the real Paul.' }
     ],
-  }, 
+  },
   {
+    id: 2,
     posterName: "Arnell Milhouse",
     resourceAuthor: "Albert Einstein",
     jobSkillLevel: "Advanced",
@@ -35,9 +37,10 @@ const posts = [
     timeToComplete: 3,
     rating: 5,
     comments: [{ commenter: "Cliff", text: "Nice post" }
-      ],
+    ],
   },
   {
+    id: 3,
     posterName: "Ava Callery",
     resourceAuthor: "Shaun Pelling (The Net Ninja)",
     jobSkillLevel: "Advanced",
@@ -56,6 +59,7 @@ const posts = [
     ],
   },
   {
+    id: 4,
     posterName: "dAwG4_43675l",
     resourceAuthor: "Robinson Crusoe",
     jobSkillLevel: "Intermediate",
@@ -72,6 +76,7 @@ const posts = [
     comments: [{ commenter: "John", text: "Nice post" }],
   },
   {
+    id: 5,
     posterName: "Katie Barriere",
     resourceAuthor: "Anchal Nigam",
     jobSkillLevel: "Beginner",
@@ -90,6 +95,7 @@ const posts = [
     comments: [{ commenter: "Katie", text: "Great article" }],
   },
   {
+    id: 6,
     posterName: "Michael Spremulli",
     resourceAuthor: "Erl Cope",
     skillLevel: "Advanced",
@@ -108,6 +114,7 @@ const posts = [
     comments: [{ poster: "Cliff", text: "Not bad, a little out of date." }],
   },
   {
+    id: 7,
     posterName: "Nicole Luguesi",
     resourceAuthor: "How to code with Duomly",
     jobSkillLevel: "beginner",
@@ -124,6 +131,7 @@ const posts = [
     comments: [{ commentor: "Cliff", text: "Nice post" }],
   },
   {
+    id: 8,
     posterName: "Stephanie Rodriguez",
     resourceAuthor: "Dan Abramov",
     jobSkillLevel: "Advanced",
