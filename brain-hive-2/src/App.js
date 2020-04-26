@@ -22,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <h1>Welcome to BrainHive!</h1>
         <PostList posts={this.state.posts} />
         <PostForm addPost={this.addPost} /> 
