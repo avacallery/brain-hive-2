@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
-import ViewPost from './components/ViewPost'
+import ViewPost from './components/ViewPost';
 import Navbar from './components/Navbar';
 import './App.css';
 import INITIAL_POSTS from './mock/posts';
