@@ -10,7 +10,7 @@ import INITIAL_POSTS from './mock/posts';
 class App extends Component {
   state = { 
     posts: [...INITIAL_POSTS], 
-    selected: 0
+    selected: 1
   };
 
   addPost = (postData) => {

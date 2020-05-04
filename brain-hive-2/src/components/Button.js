@@ -15,7 +15,11 @@ const myStyles = {
         marginRight: 5, 
         marginBottom: 10, 
         marginTop: 5, 
-        width: "60%"
+        width: "60%",
+        borderRadius: 10,
+        fontSize: 13,
+        paddingTop: 10, 
+        paddingBottom: 10
     }
 };
 

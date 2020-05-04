@@ -25,8 +25,9 @@ class ViewPost extends Component {
     };
 
     render() {
+        const { post } = this.props; 
         return (
-            <div className="selectedPost">
+            <div className="selectedPost" style={myStyles.box}>
                 <h1>{post.title}</h1>
                 <h2>{post.resourceAuthor}</h2>
                 <h4>Submitted by: {post.posterName}, Cohort: {post.cohort}</h4>
@@ -39,11 +40,25 @@ class ViewPost extends Component {
                 <Button onClick={this.clickHandler}>
                     {this.state.showComments ? "Hide Comments" : "Show Comments"}
                 </Button>
+                <center>
                 {this.state.showComments ? this.renderComments(post) : null}
+                </center>
             </div>
         )
     };
     //.map you will use to display comments
 };
 
-export default ViewPost; 
+const myStyles = {
+    box: {
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#F7F7F7",
+        border: 1,
+        borderBottomWidth: 0,
+        paddingBottom: 10,
+        marginBottom: 10, 
+    }
+}
+
+export default withRouter(ViewPost); 

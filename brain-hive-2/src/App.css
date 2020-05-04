@@ -2,6 +2,7 @@
   text-align: center;
   margin: 0 10%; 
   font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #993322;
 }
 
 .App-header {
@@ -59,8 +60,10 @@
 .header {
   display: flex;
   flex-direction: row;
-  background-color: lightblue;
-  padding: 0 3vw;
+  background-color: whitesmoke;
+  border-color: grey;
+  border-radius: 65px; 
+  padding: 0 5vw;
   margin-bottom: 16px;
 }
 
