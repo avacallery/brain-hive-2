@@ -41,10 +41,35 @@ class PostList extends Component {
 
    render() {
        return (
-           
-       )
-   }
+           <div>
+               <div style={myStyles.searchBar}>
+                   <input style={myStyles.input}
+                   type="text"
+                   placeholder="Search"
+                   onChange={this.handleChange}
+                   />
+               </div>
+               <div className="postList">{this.renderPosts()}</div>
+           </div>
+       );
+   };
+};
 
+const myStyles = {
+    searchBar: {
+        flex: 1, 
+        flexDirection: 'row', 
+        marginLeft: '30%', 
+        marginRight: '30%', 
+        marginBottom: 10, 
+        height: 32
+    },
+    input: {
+        width: '70%', 
+        height: 32, 
+        fontSize: 20, 
+        marginBottom: 4
+    }
 };
 
 export default PostList; 
