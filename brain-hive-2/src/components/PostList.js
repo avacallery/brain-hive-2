@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Post from './Post'; 
 
 class PostList extends Component {
-//where are these props coming from and what are they?
     state = {
         query: "", 
         filteredPosts: [...this.props.posts],
@@ -13,7 +12,6 @@ class PostList extends Component {
        const query = e.target.value;
 
         const newPosts = this.props.posts.filter((post) => {
-            //why are we using >= 0 what does 0 represent? 
             if (post.title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
                 return true; 
             }
