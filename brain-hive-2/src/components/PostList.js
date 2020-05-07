@@ -14,7 +14,7 @@ class PostList extends Component {
 
         const newPosts = this.props.posts.filter((post) => {
             //why are we using >= 0 what does 0 represent? 
-            if (post.title.toLowerCase().indexOf(query.toLowercase()) >= 0) {
+            if (post.title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
                 return true; 
             }
             if (post.summary.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
@@ -25,7 +25,7 @@ class PostList extends Component {
 
         this.setState({
             query: query, 
-            filteredPosts: newPosts; 
+            filteredPosts: newPosts
         });
    }
 
