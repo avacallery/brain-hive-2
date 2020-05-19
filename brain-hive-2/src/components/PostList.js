@@ -4,6 +4,8 @@ import Post from './Post';
 class PostList extends Component {
     state = {
         query: "", 
+        //we want to put the query into Redux
+        //then we could have the searchbar available to the whole app
         filteredPosts: [...this.props.posts],
     }
 
