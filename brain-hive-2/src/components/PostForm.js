@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeForm, submitForm } from '../actions';
-import Button from './common/Button';
+import Button from './Button';
 
 const PostForm = (props) => {
   const { form } = props.newPost;
