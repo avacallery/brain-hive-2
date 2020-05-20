@@ -21,8 +21,9 @@ class Post extends Component {
 
         return (
             <div
-                className={'box'}
+                className={'selectedPost'}
                 onClick={() => this.handleClick()}>
+                    <center>
                 {this.state.clicked ? <Redirect to="/post/id"/> : null}
                 <div className={'postTitle'}>
                     <h2>{post.title}</h2>
@@ -34,6 +35,7 @@ class Post extends Component {
                 }
                 <i>"{post.summary}"</i>
                 <p>Comments: {post.comments.length}</p>
+                </center>
             </div>
         )
     }

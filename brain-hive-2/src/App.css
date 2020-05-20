@@ -32,6 +32,20 @@
   max-width: 450px; 
 }
 
+.selectedPost {
+  display: flex; 
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 1px solid #f6f6f6;
+  border-radius: 8px;
+  border-bottom-width: 0px;
+  box-shadow: 0px 10px 10px black; 
+  padding-bottom: 8px; 
+  margin-bottom: 20px; 
+  width: 80%;
+  max-width: 450px; 
+}
+
 .box:hover {
   border: 1px solid #171717; 
   border-radius: 8px; 
@@ -60,9 +74,9 @@
 .header {
   display: flex;
   flex-direction: row;
-  background-color: whitesmoke;
+  background-color: rgb(204, 236, 244);
   border-color: grey;
-  border-radius: 65px; 
+  border-radius: 0px; 
   padding: 0 5vw;
   margin-bottom: 16px;
 }
