@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import ViewPost from './components/ViewPost';
@@ -8,9 +8,9 @@ import './App.css';
 import INITIAL_POSTS from './mock/posts';
 
 class App extends Component {
-  state = { 
-    posts: [...INITIAL_POSTS], 
-    selected: 1
+  state = {
+    posts: [...INITIAL_POSTS],
+    selected: 1,
   };
 
   addPost = (postData) => {
@@ -18,39 +18,38 @@ class App extends Component {
     postData.id = this.state.posts.length + 1;
     this.setState({
       ...this.state,
-      posts: [...this.state.posts,
-      postData]
+      posts: [...this.state.posts, postData],
     });
   };
 
   handleSelect = (id) => {
-    console.log('clicked', id)
+    console.log('clicked', id);
     this.setState({
-      ...this.state, 
-      selected: id
-    })
-  }
+      ...this.state,
+      selected: id,
+    });
+  };
 
   render() {
     return (
       //App.js mounts once because of BrowserRouter and Switch
       <BrowserRouter>
-        <div className="App">
+        <div className='App'>
           <Navbar />
           <Switch>
-          <Route path="/" exact>
-            <PostList 
-              posts={this.state.posts} 
-              handleSelect={this.handleSelect} />
-          </Route>
-          <Route path="/add" exact>
-            <PostForm addPost={this.addPost} />
-          </Route>
-          <Route path="/post/:postId">
-            {/* send post with the id that is selected in ViewPost route */}
-            <ViewPost 
-            post={this.state.posts[this.state.selected - 1]}/>
-          </Route>
+            <Route path='/' exact>
+              <PostList
+                posts={this.state.posts}
+                handleSelect={this.handleSelect}
+              />
+            </Route>
+            <Route path='/add' exact>
+              <PostForm addPost={this.addPost} />
+            </Route>
+            <Route path='/post/:postId'>
+              {/* send post with the id that is selected in ViewPost route */}
+              <ViewPost post={this.state.posts[this.state.selected - 1]} />
+            </Route>
           </Switch>
         </div>
       </BrowserRouter>
